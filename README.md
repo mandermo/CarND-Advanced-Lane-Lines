@@ -1,4 +1,4 @@
-## Writeup Template
+## Advanced Lane Finding project
 
 ### My solution to the "Advance Lane Lines" project in the [Udacity Self-Driving Car Nanodegree](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013). Here you can find a [link to Udacity's upstream project](https://github.com/udacity/CarND-Advanced-Lane-Lines).
 ---
@@ -28,14 +28,6 @@ The goals / steps of this project are the following:
 [polyrescale]: ./polynom_rescale_algebra.jpg "Polynom Rescale Algebra"
 [image6]: ./output_images/lanestats.jpg "Output"
 [video1]: ./output_images/processed_project_video.mp4 "Video"
-
-[//]: #[image1]: ./examples/undistort_output.png "Undistorted"
-[//]: #[image2]: ./test_images/test1.jpg "Road Transformed"
-[//]: #[image3]: ./examples/binary_combo_example.jpg "Binary Example"
-[//]: #[image4]: ./examples/warped_straight_lines.jpg "Warp Example"
-[//]: #[image5]: ./examples/color_fit_lines.jpg "Fit Visual"
-[//]: #[image6]: ./examples/example_output.jpg "Output"
-[//]: #[video1]: ./project_video.mp4 "Video"
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
 
@@ -95,13 +87,14 @@ dstpts = np.array([
 ```
 
 This resulted in the following source and destination points:
-
+```
 | Source         | Destination    |
 -----------------------------------
 | 362.8, 623.4   | 260.0, 720.0   |
 | 612.6, 445.5   | 260.0, 0.0     |
 | 704.9, 445.4   | 1020.0, 0.0    |
 | 982.8, 622.6   | 1020.0, 720.0  |
+```
 
 I verified that my perspective transform was working as expected by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
